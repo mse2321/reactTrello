@@ -14,16 +14,16 @@ var ListContainer = React.createClass({
     },
     onAddInputChanged: function() {
         this.setState({
-            inputText: 'Text'
+            inputText: text
         });
     },
     onAddSubmit: function() {
         this.setState({
-            clicked: true
+            cardsInList.push(inputText)
         });
     },
     render: function() {
-        return <List cards={cardsInList} lists={listTitles[0]} onClick={ this.onAddInputChanged } onSubmit={ this.onAddSubmit } text={inputText} />;
+        return <List cards={cardsInList} lists={listTitles[0]} onClick={ this.onAddInputChanged } onSubmit={ this.onAddSubmit } />;
     }
 });
 
